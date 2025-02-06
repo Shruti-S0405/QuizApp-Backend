@@ -1,4 +1,4 @@
-package com.zephyra.quizapp;
+package com.zephyra.quizapp.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,12 +8,9 @@ import lombok.Data;
 
 @Data
 @Entity
-
 public class Question {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    
     private Integer Id;
     private String difficultyLevel;
     private String questionText;
@@ -21,5 +18,6 @@ public class Question {
     private String option2;
     private String option3;
     private String correctAnswer;
-
 }
+
+

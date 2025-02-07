@@ -8,9 +8,20 @@ import com.zephyra.quizapp.Repository.QuestionRepository;
 
 @Service
 public class QuestionService {
+
         @Autowired
-        QuestionRepository questionDao;
+        QuestionRepository questionRepository;
+
         public List<Question> getAllQuestions(){
-            return questionDao.findAll();
+            return questionRepository.findAll();
+        }
+
+        public List<Question> getQuestionsByCategory(String category){
+            return questionRepository.findByCategory(category);
+        }
+
+        public String addQuestion(Question question){
+            questionRepository.save(question);
+            return "Success!!";
         }
 }

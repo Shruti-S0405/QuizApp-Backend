@@ -10,6 +10,8 @@ import com.zephyra.quizapp.Repository.QuestionRepository;
 import com.zephyra.quizapp.Model.Question;
 import com.zephyra.quizapp.Model.QuestionWrapper;
 import com.zephyra.quizapp.Repository.QuizRepository;
+import com.zephyra.quizapp.Model.Response;
+
 
 @Service
 public class QuizService {
@@ -40,5 +42,18 @@ public class QuizService {
 
         return new ResponseEntity<>(questionsForUser, HttpStatus.OK);
 
+    }
+
+    public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses){
+        Quiz quiz = quizRepository.findById(id).get();
+        List<Question> questions = quiz.getQuestions();
+        int right = 0;
+        int i = 0;
+        for(Response response :responses){
+            if(response.getResponse().equals(questions.get(i).getCorrectAnswer()))
+                right++;
+            i++;
+        }
+        return new ResponseEntity<>(right, HttpStatus.OK);
     }
 }

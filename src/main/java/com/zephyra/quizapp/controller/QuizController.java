@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zephyra.quizapp.Model.QuestionWrapper;
+import com.zephyra.quizapp.DTO.QuestionWrapper;
 import com.zephyra.quizapp.Model.Response;
 import com.zephyra.quizapp.service.QuizService;
 

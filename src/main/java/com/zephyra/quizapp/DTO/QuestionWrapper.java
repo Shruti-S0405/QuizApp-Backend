@@ -1,4 +1,4 @@
-package com.zephyra.quizapp.Model;
+package com.zephyra.quizapp.DTO;
 
 import lombok.Data;
 

@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import com.zephyra.quizapp.Model.Quiz;
 import com.zephyra.quizapp.Repository.QuestionRepository;
+import com.zephyra.quizapp.DTO.QuestionWrapper;
 import com.zephyra.quizapp.Model.Question;
-import com.zephyra.quizapp.Model.QuestionWrapper;
 import com.zephyra.quizapp.Repository.QuizRepository;
 import com.zephyra.quizapp.Model.Response;
 
